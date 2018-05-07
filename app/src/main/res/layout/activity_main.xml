@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="michaellin.lab_assignment_9.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:context="todolist.youtube.com.codetutor.MainActivity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:gravity="center"
+            android:id="@+id/editTextNewToDoString"
+            android:hint="STUDENT" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:gravity="center"
+            android:id="@+id/editTextPlace"
+            android:hint="Grade" />
+
+        <Button
+            android:text="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAddToDo"
+            android:layout_gravity="right"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:lines="10"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/textViewToDos"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/buttonRemoveToDo"
+                android:id="@+id/editTextToDoId"
+                android:hint="Student ID" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:id="@+id/buttonRemoveToDo"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modify"
+                android:layout_below="@+id/buttonRemoveToDo"
+                android:id="@+id/buttonModifyToDo"
+                android:layout_alignParentRight="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/buttonModifyToDo"
+                android:layout_below="@id/editTextToDoId"
+                android:layout_alignParentLeft="true"
+                android:inputType="text"
+                android:gravity="center"
+                android:id="@+id/editTextNewToDo"
+                android:hint="Modify Student" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
